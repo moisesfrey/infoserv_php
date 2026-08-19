@@ -1,27 +1,23 @@
 <?php
 
-/** 
- *  *calcular o IMC de uma pessoa 
- *infromar se ela esta acima do peso, peso ideal ou abaixo do peso
-*/
+/**
+ * calcular e exibir a tabuada do 5 utilizando FOR 
+ * resultado esperado:
+ * 5X1=5
+ * 5x2=10
+ * 5x3=15
+ * etc
+ * 
+ * calcular e exibir todos os numeros pares de 2 até 50
+ * sem pular de 2 em 2 no FOR;
+ * dica:utilizar formula dos numeros pares
+ */
+   
+/**
+ * calcular e exibir os 5 primeiros numeros primos 
+ * dica: utilizar formula dos numeros pares 
 
-echo"<br>";
-
-$peso=80; 
-$altura=1.80;
-$IMC= $peso / ($altura * $altura);
-
-if ($IMC <= 18.5 ) {
-    $peso / ($altura * $altura);
-    echo "Está abaixo do peso";
-}
-elseif ($IMC <=24.9) {
-    echo "Está no peso ideal";
-}
-else ($IMC <=29.9); {
-    echo "Está acima do peso";
-}
-
+ */
 
 
 
