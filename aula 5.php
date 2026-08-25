@@ -27,7 +27,7 @@ for ($i = 1; $i <= 10; $i++ ) {
 
 echo "<br>";
 
-for ($numero = 2; $numero <=50; $numereo++) {
+for ($numero = 2; $numero <=50; $numero++) {
     $resto = $numero % 2;
     $ehpar = 
     $resto ==0;
@@ -38,3 +38,36 @@ for ($numero = 2; $numero <=50; $numereo++) {
 }
 
 echo "<br>";
+
+
+$limiteprimos = 5;
+$contadorlimitePrimos = 0;
+
+
+for ($numeroAvaliado = 2; $contadorlimitePrimos <= $limiteprimos; $numeroAvaliado++) {
+    
+$Ehprimo = true;
+$penultimoNumero = $numeroAvaliado - 1;
+
+    for ($divisor = 2; $divisor <= $penultimoNumero; $divisor++) {
+    $resto = $numeroAvaliado % $divisor;
+    $naoEhPrimo = $resto ==0;
+   
+
+    if($naoEhPrimo) {
+       $Ehprimo = false;  
+
+     break;
+
+     }
+ 
+  }
+    if($Ehprimo) {
+        $contadorlimitePrimos++;
+        echo "O número $numeroAvaliado é primo.<br>";
+    }
+}
+
+
+echo"<br>";
+
