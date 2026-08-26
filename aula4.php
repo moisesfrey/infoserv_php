@@ -1,5 +1,7 @@
 <?php
 
+use function PHPSTORM_META\argumentsSet;
+
 $contador = 1;
 
 for($contador = 0; $contador <=5; $contador++) {
@@ -25,4 +27,89 @@ while($contador >= 0) {
     echo $contador . "<br>";
     $contador--;
 }
+echo "<br>";
+
+
+$funcionarios = []; // array vazio
+$funcionarios = [123, 25]; // tamanho 2
+$funcionarios = ["Ariel", "Maria", "Joao",]; // 3
+//                  0        1        2
+
+
+foreach($funcionarios as $funcionario) {
+    echo $funcionario . "<br>";
+}
+echo "FOR<br>";
+for($i =0; $i < count($funcionarios); $i++) {
+    echo $funcionarios [$i] . "<br>"; 
+}
+
+echo "<br>";
+
+$funcionairosArrayAssociativo = [
+    "nome" => "Ariel",
+    "cargo" => "Professor",
+    "salario" => "5000"
+];
+foreach($funcionarios as $funcionario) {
+    echo $funcionario . "<br>";
+}
+foreach($funcionairosArrayAssociativo as $chave => $funcionario ) {
+    echo "$chave: $funcionario <br>";
+}
+
+
+
+echo"<br>";
+echo $funcionarios [0];
+echo $funcionarios [1];
+echo $funcionairosArrayAssociativo ["nome"];
+echo $funcionairosArrayAssociativo ["cargo"];
+
+echo "<br>";
+
+/**
+ * utilizar o array anterior e aplicar os itens a baixo.
+ * conceder 10 % de aumento para cada funcionario 
+ * adicionar setor do funcionario 
+ * adicionar desconto do inss do funcionario.
+ */
+
+
+$funcionairosArrayAssociativo = [
+    "nome" => "Ariel",
+    "salario" => "5000",
+    "setor" => "educação",
+    "cargo" => "Professor",
+     "Desconto INSS" => "230",
+];
+$Percentual = 10;
+$Percentualaumento = $Percentual /100;
+$salario = $funcionairosArrayAssociativo["salario"];
+$aumento = $salario * $Percentualaumento;
+$aumentoformat= formatarParaReal($aumento);
+$novosalario = formatarParaReal($salario + $aumento);
+$salarioantigo = formatarParaReal($salario);
+
+echo"R$ ". formatarParaReal(10.49);
+
+echo "O salario era de $salarioantigo o aumento foi de $aumento e seu novo salario é: $novosalario";
+
+function formatarParaReal(float $valor): string {
+$valorformatado = number_format($valor, 2, ',', '.');
+return $valorformatado;
+}
+
+
+
+echo "<br>";
+
+
+
+
+
+
+
+
+
 
