@@ -96,8 +96,68 @@ echo"R$ ". formatarParaReal(10.49);
 echo "O salario era de $salarioantigo o aumento foi de $aumento e seu novo salario é: $novosalario";
 
 function formatarParaReal(float $valor): string {
-$valorformatado = number_format($valor, 2, ',', '.');
-return $valorformatado;
+    $valorformatado = number_format($valor, 2, ',', '.');
+    return $valorformatado;
+}
+
+
+
+echo "<br>";
+
+
+function somar(float $a, float $b):float
+{
+    return $a + $b;
+}
+$resultado = somar(10, 5);
+
+echo "o valor da soma é $resultado";
+
+echo "<br>";
+
+function dividir(float $a, float $b):float 
+{
+    return $a / $b;
+}
+$resultado = dividir(6, 3);
+
+echo "o valor da divisao é $resultado";
+
+echo "<br>";
+
+
+function subtrair(float $a, float $b):float
+{
+    return $a - $b;
+}
+$resultado = subtrair(8, 4);
+
+echo "o valor da subtraçao é $resultado";
+
+echo "<br>";
+
+function multiplicaçao(float $a, float $b):float 
+{
+    return $a * $b;
+}
+$resultado = multiplicaçao(4, 2);
+
+echo "o valor da multiplicaçao é $resultado";
+
+
+
+function tabuada(float $numero, float $limite = 10)
+{
+    for ($i = 1; $i <= $limite; $i++ ) {
+        $resultado = $numero * $i;
+        echo "$numero X $i = $resultado <br>";
+    }   
+}
+ echo "<br>";
+tabuada(5);
+
+function mediaAritimetica($valor1, $valor2, $valor3) {
+    $mediaAritimetica = ($valor1 + $valor2 + $valor3);
 }
 
 
@@ -109,7 +169,29 @@ echo "<br>";
 
 
 
+    function mediaPonderada($prova1, $prova2, $prova3) {}
+$numerador = ($prova1 * $peso1) + ($prova2 * $peso2 ) + ($prova3 * $peso3);
+$denominador = $peso1 + $peso2 + $peso3;
+$mediaponderada = $numerador / $denominador;
+
+if ($mediaponderada  >=7) {
+    echo "o aluno foi aprovado com a média ponderada:$mediaponderada"; 
+}
+elseif ($mediaponderada >=5) {
+    echo"o aluno está em recuperação com a média ponderada:$mediaponderada";
+}
+else {
+    echo "o aluno está reprovado com a média ponderada: $mediaponderada";
+}
+echo"<br>";
 
 
 
 
+
+
+
+
+function calcularsalario($salario, $bonus, $desconto){
+    $salariofinal = $salario + $bonus - $desconto;
+}
