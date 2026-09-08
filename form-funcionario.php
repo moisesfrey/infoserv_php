@@ -10,38 +10,38 @@
     <h1>Cadastro</h1>
 
     <form method="POST" action="salvar-funcionario.php">
-        <div class="col-lg-3 col-md-4 col-sm-3 col-xs-3" >
-        <div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6" >
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6" >
             <label for=" ">Nome</label>
             <input type="text" name="nome" id= "nome">
         </div>
         <br>
         <div>
-              <div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6" >
             <label for=" ">Sobrenome</label>
             <input type="text" name="Sobrenome" id= "Sobrenome">
         </div>
         <br>
         <div>
-              <div>
+               <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6" >
             <label for=" ">Cargo</label>
             <input type="text" name="Cargo" id= "Cargo">
         </div>
         <br>
         <div>
-              <div>
+               <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6" >
             <label for=" ">Setor</label>
             <input type="text" name="Setor" id= "Setor">
         </div>
         <br>
         <div>
-              <div>
+               <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6" >
             <label for=" ">Salario</label>
             <input type="text" name="Salario" id= "Salario">
         </div>
         <br>
         <div>
-              <div>
+               <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6" >
             <label for=" ">Cracha</label>
             <input type="text" name="Cracha" id= "Cracha">
         </div>
