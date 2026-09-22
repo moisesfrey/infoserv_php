@@ -30,7 +30,10 @@ CREATE TABLE `funcionario` (
   `cargo` varchar(100) NOT NULL,
   `setor` varchar(100) NOT NULL,
   `cracha` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
+  `id pessoa` smallint(6) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `funcionario_pessoa_FK` (`id pessoa`),
+  CONSTRAINT `funcionario_pessoa_FK` FOREIGN KEY (`id pessoa`) REFERENCES `pessoa` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -40,8 +43,33 @@ CREATE TABLE `funcionario` (
 
 LOCK TABLES `funcionario` WRITE;
 /*!40000 ALTER TABLE `funcionario` DISABLE KEYS */;
-INSERT INTO `funcionario` VALUES (1,'moises','frey',4000,'tecnico de informatica','manutencao','2087');
+INSERT INTO `funcionario` VALUES (1,'moises','frey',4000,'tecnico de informatica','manutencao','2087',NULL);
 /*!40000 ALTER TABLE `funcionario` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pessoa`
+--
+
+DROP TABLE IF EXISTS `pessoa`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `pessoa` (
+  `id` smallint(6) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `telefone` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pessoa`
+--
+
+LOCK TABLES `pessoa` WRITE;
+/*!40000 ALTER TABLE `pessoa` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pessoa` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -57,4 +85,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-09-08 21:49:35
+-- Dump completed on 2026-09-22 20:53:29
