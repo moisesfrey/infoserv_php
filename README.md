@@ -10,3 +10,9 @@ sudo mysql -uroot -p
 
 qwe123!
 
+suporte@DESKTOP-LQ0UB60:/var/www/html/infoserv_php$ sudo service apache2 start
+ * Starting Apache httpd web server apache2                                                                                                                                                                                 * 
+suporte@DESKTOP-LQ0UB60:/var/www/html/infoserv_php$ sudo service mariadb start
+ * Starting MariaDB database server mariadbd                                                                                                                                                                        [ OK ] 
+suporte@DESKTOP-LQ0UB60:/var/www/html/infoserv_php$ sudo mysql -uroot -p
+[sudo] senha para suporte: qwe123!

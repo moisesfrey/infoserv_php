@@ -33,6 +33,7 @@ $resultado = $conexao->query($sql);
 <?php
     while($funcionario = $resultado->fetch_assoc()){
         $objfncionario = (object) $funcionario;
+        $idFuncionario = $objfncionario->id;
     ?>
 
     <tr>
@@ -44,20 +45,12 @@ $resultado = $conexao->query($sql);
         <td><?=  $objfncionario->id ?></td>
         <td><?=  $objfncionario->id ?></td>
         <td><?=  $objfncionario->id ?></td>
-
-
-
-
-
-
-
-
-
-
-
-    }
-    ?>
+        <td>   
+            <a href="editar-funcionario.php?id="=<?php echo $idFuncionario ?>"</a>
+             <a href="deletar-funcionario.php?id=">Excluir</a>
+        </td>
+    </tr>
+    <?php } ?>
 </table>
 
  <?php } ?>
-
