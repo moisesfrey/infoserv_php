@@ -43,7 +43,8 @@ CREATE TABLE `funcionario` (
 
 LOCK TABLES `funcionario` WRITE;
 /*!40000 ALTER TABLE `funcionario` DISABLE KEYS */;
-INSERT INTO `funcionario` VALUES (1,'moises','frey',4000,'tecnico de informatica','manutencao','2087',NULL);
+INSERT INTO `funcionario` VALUES (2,'Ariel','Felippi',132456789,'Professor','Educação','4560',1),(3,'Maria','Silva',45612312,'Professora','Educação','4565',4),(4,'Fulano','Borges',45612,'Zelador','Administrativo','3852',NULL),(5,'Pedro','Santana',456789123,'Diretor','Educação','00123',NULL);
+/*!40000 ALTER TABLE `funcionario` ENABLE KEYS */;
 /*!40000 ALTER TABLE `funcionario` ENABLE KEYS */;
 UNLOCK TABLES;
 
