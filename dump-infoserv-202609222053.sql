@@ -69,6 +69,7 @@ CREATE TABLE `pessoa` (
 
 LOCK TABLES `pessoa` WRITE;
 /*!40000 ALTER TABLE `pessoa` DISABLE KEYS */;
+INSERT INTO `pessoa` VALUES (1,'Ariel','ariel@infoserv.com','54123456789'),(2,'Fulano','fulano@infoserv.com','54987654321'),(3,'Pedro','pedro@infoserv.com','54789456789'),(4,'Maria','maria@infoserv.com','54321678893');
 /*!40000 ALTER TABLE `pessoa` ENABLE KEYS */;
 UNLOCK TABLES;
 
