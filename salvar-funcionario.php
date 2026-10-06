@@ -16,8 +16,6 @@ $valores = "VALUES ('$nome', '$sobrenome', '$salario', '$cargo', '$setor', '$cra
 
 $sql .= $campos . $valores;
 
-$conexao->query($sql);
-
 $resultado = $conexao->query($sql);
 
 header("Location: listar-funcionarios.php");
