@@ -10,10 +10,6 @@ $setor = $_POST["setor"] ?? "";
 $salario = $_POST["salario"] ?? "";
 $cracha = $_POST["cracha"] ?? "";
 
-if(empty($idFuncionario)) {
-    retornarparalistagem();
-}
-
 if(empty($Nome)) {
     retornarparalistagem();
 }
