@@ -16,7 +16,7 @@ $resultado = $conexao->query($sql);
     if (empty($resultado)) {
  ?>
 <p>Sem dados para exibir.</p>
-    <?php } else { ?> 
+    <?php } else { ?>  
 
 <table border="1" cellpading="8">
     <tr>
