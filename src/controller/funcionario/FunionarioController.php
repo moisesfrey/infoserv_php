@@ -8,6 +8,8 @@ class FunionarioController extends BaseModel {
     {
        $this->funcionarioModel = $funcionariomodel;
     }
+    public function __construct
+
 }
 
 
