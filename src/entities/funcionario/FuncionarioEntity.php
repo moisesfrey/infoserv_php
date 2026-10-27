@@ -3,28 +3,35 @@
 class FuncionarioEntity
 {
     private ?int $id = null;
-    private string $nome = " ";
-    private string $sobrenome = " ";
+    private string $nome = "";
+    private string $sobrenome = "";
     private float $salario = 0;
-    private string $cargo = " ";
-    private string $setor = " ";
-    private string $cracha = " ";
+    private string $cargo = "";
+    private string $setor = "";
+    private string $cracha = "";
+    private ?int $idPessoa = null;
 
-    public static function criarPorDados(object|array $dados): self {
-     $funcionario = new self();
-     $funcionario->preencher($dados);
-     return $funcionario;
+    public static function criarPorDados(object|array $dados): self
+    {
+        $funcionario = new self();
+
+        $funcionario->preencher($dados);
+
+        return $funcionario;
     }
-    public function preencher(object|array $dados){
+
+    public function preencher(object|array $dados): void
+    {
         $dados = (object) $dados;
 
-        $this->id= isset($dados->id) ? (int) $dados->id : $this->id;
+        $this->id = isset($dados->id) ? (int) $dados->id : $this->id;
         $this->nome = $dados->nome ?? $this->nome;
         $this->sobrenome = $dados->sobrenome ?? $this->sobrenome;
-        $this->salario = isset($dados->salario) ? (float) $dados->salario : $this->salario;
+        $this->salario = isset($dados->salario) && $dados->salario !== "" ? (float) $dados->salario : $this->salario;
         $this->cargo = $dados->cargo ?? $this->cargo;
         $this->setor = $dados->setor ?? $this->setor;
         $this->cracha = $dados->cracha ?? $this->cracha;
+        $this->idPessoa = isset($dados->idPessoa) && $dados->idPessoa !== "" ? (int) $dados->idPessoa : $this->idPessoa;
     }
 
     public function toArrayParaBanco(): array
@@ -36,6 +43,7 @@ class FuncionarioEntity
             "cargo" => $this->cargo,
             "setor" => $this->setor,
             "cracha" => $this->cracha,
+            "idPessoa" => $this->idPessoa,
         ];
     }
 
@@ -44,60 +52,38 @@ class FuncionarioEntity
         return $this->id;
     }
 
-    public function getNome(): string 
+    public function getNome(): string
     {
         return $this->nome;
     }
 
-    public function getSobrenome(): string 
+    public function getSobrenome(): string
     {
         return $this->sobrenome;
     }
 
-    public function getsalario(): float
+    public function getSalario(): float
     {
         return $this->salario;
     }
 
-    public function getCargo(): string 
+    public function getCargo(): string
     {
         return $this->cargo;
     }
 
-    public function getSetor(): string 
+    public function getSetor(): string
     {
         return $this->setor;
     }
 
-    public function getCracha(): string 
+    public function getCracha(): string
     {
         return $this->cracha;
     }
 
+    public function getIdPessoa(): ?int
+    {
+        return $this->idPessoa;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
