@@ -1,5 +1,5 @@
 <?php
 
-class FuncionarioModel extends Basemodel {
-    protected string $tabela = "funcionario";                                                                                                                                                     ";
+class FuncionarioModel extends BaseModel {
+    protected string $tabela = "funcionario";
 }
