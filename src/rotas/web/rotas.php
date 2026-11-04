@@ -1,16 +1,8 @@
 <?php
 
 return [
-    ['GET', '/', function () {
-        echo "<h1>Página inicial</h1>";
-        echo "<a href='" . url("/funcionarios") . "'>Funcionários</a>";
-    }],
 
-        ['GET', '/', function () {
-        echo "<h1>Página inicial</h1>";
-        echo "<a href='" . url("/controllers") . "'>PessoaController.php</a>";
-    }],
-
+    ['GET', '/', [$homeController, 'listar']],
 
     ['GET', '/funcionarios', [$funcionarioController, 'listar']],
     ['GET', '/funcionarios/novo', [$funcionarioController, 'novo']],
@@ -19,12 +11,17 @@ return [
     ['POST', '/funcionarios/{id}', [$funcionarioController, 'atualizar']],
     ['POST', '/funcionarios/{id}/deletar', [$funcionarioController, 'deletar']],
 
-    ['GET', '/pessoa', [$PessoaController, 'listar']],
-    ['GET', '/pessoa/novo', [$PessoaController, 'novo']],
-    ['POST', '/pessoa', [$PessoaController, 'criar']],
-    ['GET', '/pessoa/{id}/editar', [$PessoaController, 'editar']],
-    ['POST', '/pessoa/{id}', [$PessoaController, 'atualizar']],
-    ['POST', '/pessoa/{id}/deletar', [$PessoaController, 'deletar']]
+    ['GET', '/pessoas', [$pessoaController, 'listar']],
+    ['GET', '/pessoas/novo', [$pessoaController, 'novo']],
+    ['POST', '/pessoas', [$pessoaController, 'criar']],
+    ['GET', '/pessoas/{id}/editar', [$pessoaController, 'editar']],
+    ['POST', '/pessoas/{id}', [$pessoaController, 'atualizar']],
+    ['POST', '/pessoas/{id}/deletar', [$pessoaController, 'deletar']],
 
-
+    ['GET', '/Usuario', [$usuariocontroller, 'listar']],
+    ['GET', '/Usuarios/novo', [$usuariocontroller, 'novo']],
+    ['POST', '/Usuarios', [$usuariocontroller, 'criar']],
+    ['GET', '/Usuarios/{id}/editar', [$usuariocontroller, 'editar']],
+    ['POST', '/Usuarios/{id}', [$usuariocontroller, 'atualizar']],
+    ['POST', '/Usuarios/{id}/deletar', [$usuariocontroller, 'deletar']],
 ];
