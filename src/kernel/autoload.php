@@ -24,4 +24,4 @@ spl_autoload_register(function (string $nomeDaClasse): void {
             return;
         }
     }
-});
+}); 

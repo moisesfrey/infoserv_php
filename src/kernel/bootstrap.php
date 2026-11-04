@@ -11,14 +11,26 @@ require_once APP_PATH . "/kernel/autoload.php";
 require_once APP_PATH . "/config/conexao.php";
 require_once APP_PATH . "/database/BancoDeDados.php";
 require_once APP_PATH . "/database/BaseModel.php";
+require_once APP_PATH . "/controllers/homeController.php";
+
 require_once APP_PATH . "/models/funcionario/FuncionarioModel.php";
 require_once APP_PATH . "/controllers/funcionario/FuncionarioController.php";
+
 require_once APP_PATH . "/models/pessoa/PessoaModel.php";
-require_once APP_PATH . "/entities/pessoa/PessoaEntity.php";
-require_once APP_PATH . "/controllers/pessoa/PessoaController.php";
+require_once APP_PATH . "/controllers/pessoa/pessoaController.php";
 
+require_once APP_PATH . "/models/Usuario/UsuarioModel.php";
+require_once APP_PATH . "/controllers/Usuario/UsuarioController.php";
 
+$homeController = new HomeController();
 
 $bancoDeDados = new BancoDeDados($conexao);
 $funcionarioModel = new FuncionarioModel($bancoDeDados);
 $funcionarioController = new FuncionarioController($funcionarioModel);
+
+$pessoaModel = new PessoaModel($bancoDeDados);
+$pessoaController = new PessoaController($pessoaModel);
+                
+
+$usuariomodel= new UsuarioModel($bancoDeDados);
+$usuariocontroller = new UsuarioController($usuariomodel);
