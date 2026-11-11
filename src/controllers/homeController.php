@@ -6,11 +6,10 @@ class HomeController extends BaseController
     {
         $dados = [
             "funcionarios" => "Funcionários",
-            "pessoas" => "Pessoas",
-            "Usuarios" => "Usuarios"
-    ];
+            "pessoas" => "Pessoas"
+        ];
 
-        $this->view("home", [
+        $this->view("welcome", [
             "dados" => $dados,
         ]);
     }
