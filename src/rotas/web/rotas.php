@@ -4,6 +4,8 @@ return [
 
     ['GET', '/', [$homeController, 'listar']],
 
+    ['GET', '/login', [$logincontroller, 'listar']],
+
     ['GET', '/funcionarios', [$funcionarioController, 'listar']],
     ['GET', '/funcionarios/novo', [$funcionarioController, 'novo']],
     ['POST', '/funcionarios', [$funcionarioController, 'criar']],
@@ -17,11 +19,4 @@ return [
     ['GET', '/pessoas/{id}/editar', [$pessoaController, 'editar']],
     ['POST', '/pessoas/{id}', [$pessoaController, 'atualizar']],
     ['POST', '/pessoas/{id}/deletar', [$pessoaController, 'deletar']],
-
-    ['GET', '/Usuario', [$usuariocontroller, 'listar']],
-    ['GET', '/Usuarios/novo', [$usuariocontroller, 'novo']],
-    ['POST', '/Usuarios', [$usuariocontroller, 'criar']],
-    ['GET', '/Usuarios/{id}/editar', [$usuariocontroller, 'editar']],
-    ['POST', '/Usuarios/{id}', [$usuariocontroller, 'atualizar']],
-    ['POST', '/Usuarios/{id}/deletar', [$usuariocontroller, 'deletar']],
 ];

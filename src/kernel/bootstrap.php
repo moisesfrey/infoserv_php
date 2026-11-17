@@ -24,6 +24,9 @@ require_once APP_PATH . "/controllers/Usuario/UsuarioController.php";
 
 $homeController = new HomeController();
 
+$logincontroller= new LoginController();
+
+
 $bancoDeDados = new BancoDeDados($conexao);
 $funcionarioModel = new FuncionarioModel($bancoDeDados);
 $funcionarioController = new FuncionarioController($funcionarioModel);
