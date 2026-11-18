@@ -12,7 +12,7 @@ function url(string $caminho = ""): string
     return $baseUrl . $caminho;
 }
 
-function view(string $caminho, array $dados = []): void
+    function view(string $caminho, array $dados = []): void
 {
     extract($dados);
 
@@ -70,7 +70,7 @@ function renderizarFlashMessages(): void
                     background-color: {$corFundo};
                     color: {$corTexto};
                 '>
-                    " . escapar($mensagem) . "
+                    " . escapar($mensagem) . "&nbsp;<span>&#215;</span>
                 </div>
             ";
         }

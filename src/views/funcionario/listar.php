@@ -1,45 +1,37 @@
-<h1>Funcionários</h1>
+<h1>Pessoas</h1>
 
 <?php renderizarFlashMessages(); ?>
 
-<a href="<?= url("/funcionarios/novo") ?>">Novo funcionário</a>
+<a href="<?= url("/pessoas/novo") ?>">Nova Pessoa</a>
 
 <br><br>
 
-<?php if (empty($funcionarios)): ?>
-    <p>Nenhum funcionário encontrado.</p>
+<?php if (empty($dados)): ?>
+    <p>Nenhuma pessoa encontrada.</p>
 <?php else: ?>
     <table border="1" cellpadding="8">
         <tr>
             <th>ID</th>
             <th>Nome</th>
-            <th>Sobrenome</th>
-            <th>Cargo</th>
-            <th>Setor</th>
-            <th>Salário</th>
-            <th>Crachá</th>
-            <th>ID Pessoa</th>
+            <th>E-mail</th>
+            <th>Telefone</th>
             <th>Ações</th>
         </tr>
 
-        <?php foreach ($funcionarios as $funcionario): ?>
+        <?php foreach ($dados as $pessoa): ?>
             <tr>
-                <td><?= escapar($funcionario->getId()) ?></td>
-                <td><?= escapar($funcionario->getNome()) ?></td>
-                <td><?= escapar($funcionario->getSobrenome()) ?></td>
-                <td><?= escapar($funcionario->getCargo()) ?></td>
-                <td><?= escapar($funcionario->getSetor()) ?></td>
-                <td><?= escapar($funcionario->getSalario()) ?></td>
-                <td><?= escapar($funcionario->getCracha()) ?></td>
-                <td><?= escapar($funcionario->getIdPessoa()) ?></td>
+                <td><?= escapar($pessoa->getId()) ?></td>
+                <td><?= escapar($pessoa->getNome()) ?></td>
+                <td><?= escapar($pessoa->getEmail()) ?></td>
+                <td><?= escapar($pessoa->getTelefone()) ?></td>
                 <td>
-                    <a href="<?= url("/funcionarios/{$funcionario->getId()}/editar") ?>">
+                    <a href="<?= url("/pessoas/{$pessoa->getId()}/editar") ?>">
                         Editar
                     </a>
 
                     <form
                         method="POST"
-                        action="<?= url("/funcionarios/{$funcionario->getId()}/deletar") ?>"
+                        action="<?= url("/pessoas/{$pessoa->getId()}/deletar") ?>"
                         style="display:inline"
                     >
                         <button type="submit">Excluir</button>
