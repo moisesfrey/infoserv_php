@@ -17,3 +17,5 @@
 |
 */
 define("BASE_URL", "/infoserv_php");
+
+define("PUBLIC_ASSETS", "BASE URL" . "/src/public/acess");
